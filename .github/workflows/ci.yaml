@@ -14,7 +14,12 @@ jobs:
           python-version: '3.13'
 
       - name: lancer les dépendances
-        run: pip install -r requirements.txt
-
+        run: |
+          python -m pip install --upgrade pip
+          pithon -m pip install -r requirements.txt
+      
+      - name: Vérifier Pytest
+        run: python -m pytest --version
+      
       - name: lancer les tests
         run: pythest -v
