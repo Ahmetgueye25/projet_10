@@ -3,7 +3,7 @@ on:
   push 
 jobs:
   job:
-    runs-on: ubuntu
+    runs-on: ubuntu-latest
     steps:
       - name: récuéprer le code
         uses: actions/checkout@v4
