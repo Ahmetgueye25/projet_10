@@ -1,0 +1,18 @@
+name: Projet-10
+on:
+  push 
+jobs:
+  job:
+    runs-on: ubuntu
+    steps:
+      - name: récuéprer le code
+        uses: actions/checkout@v4
+
+      - name: installer python
+        uses: action/setup-python@v5
+
+      - name: lancer les dépendances
+        run: pip intall -r requirements.txt
+
+      - name: lancer les tests
+        run: pythest -v
